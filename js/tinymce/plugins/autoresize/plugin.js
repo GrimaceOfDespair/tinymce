@@ -129,6 +129,8 @@ tinymce.PluginManager.add('autoresize', function(editor) {
 
 		overflowPadding = editor.getParam('autoresize_overflow_padding', 1);
 		bottomMargin = editor.getParam('autoresize_bottom_margin', 50);
+		editor.getDoc().documentElement.style.height = 'auto';
+		editor.getBody().style.height = 'auto';
 
 		if (overflowPadding !== false) {
 			editor.dom.setStyles(editor.getBody(), {
